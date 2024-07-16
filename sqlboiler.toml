@@ -1,0 +1,13 @@
+[psql]
+dbname  = "test"
+user    = "root"
+pass    = "root"
+host    = "localhost"
+sslmode = "disable"
+schema  = "public"
+
+[struct-tag-cases]
+toml = "camel"
+yaml = "camel"
+json = "camel"
+boil = "snake"

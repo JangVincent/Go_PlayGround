@@ -5,7 +5,7 @@ import (
 
 	"log"
 
-	"phantola.com/greetings"
+	"github.com/Phantola/Go_PlayGround/greetings"
 )
 
 func main() {
