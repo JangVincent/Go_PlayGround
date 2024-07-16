@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"phantola.com/greetings"
-
 	"log"
+
+	"phantola.com/greetings"
 )
 
 func main() {
@@ -13,12 +13,18 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	// Get a greeting message and print it.
-	message, err := greetings.Hello("Phantola")
-
-	if err != nil {
-		log.Fatal(err)
-	}
 	
-	fmt.Println(message)
+	names := []string{"Gladys", "Samantha", "Darrin"}
+
+	// Request greeting messages for the names.
+	messages, err := greetings.Hellos(names)
+	if err != nil {
+			log.Fatal(err)
+	}
+	// If no error was returned, print the returned map of
+	// messages to the console.
+
+	for _, message := range messages {
+		fmt.Println(message)
+	}
 }
