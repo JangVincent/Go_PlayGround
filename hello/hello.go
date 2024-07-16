@@ -27,4 +27,11 @@ func main() {
 	for _, message := range messages {
 		fmt.Println(message)
 	}
+
+	// Test the format specifiers
+	fmt.Printf("%q", "Hello\tworld.") // Show literal with escape characters
+	fmt.Println()
+	fmt.Printf("%#q", "Hello\tworld.") // Show literal but evaluate escape characters with backtic
+	fmt.Println()
+	fmt.Printf("%v", "Hello\tworld.") // Show value
 }
